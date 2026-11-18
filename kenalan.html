@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aljabar Menyenangkan – Kenalan dengan Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= MENU ATAS ================= -->
+  <nav class="navbar">
+    <div class="wadah">
+      <a href="index.html" class="logo"><span class="logo-ikon">x</span> Aljabar Menyenangkan</a>
+      <button class="tombol-menu" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="kenalan.html">Kenalan Aljabar</a></li>
+        <li><a href="metode.html">Metode</a></li>
+        <li><a href="contoh.html">Contoh Soal</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= JUDUL HALAMAN ================= -->
+  <header class="hero-kecil">
+    <div class="wadah">
+      <span class="lencana-langkah">Langkah 1 dari 4</span>
+      <h1>Kenalan dengan Aljabar</h1>
+      <p>Variabel, koefisien, konstanta, suku, dan suku sejenis</p>
+    </div>
+  </header>
+
+  <!-- ================= 1. APA ITU ALJABAR ================= -->
+  <section class="bagian">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Bagian 1</span>
+        <h2>Apa Itu Aljabar?</h2>
+      </div>
+
+      <div class="kotak dua-kolom muncul-saat-gulir">
+        <div>
+          <p>Aljabar adalah cara menulis matematika dengan memakai <b>huruf</b> untuk mewakili bilangan yang <b>belum diketahui</b>.</p>
+          <div class="contoh-kecil">
+            <p>Misalnya harga 1 buku belum diketahui. Kita sebut saja harganya <b>x</b>.</p>
+            <p>Kalau membeli 3 buku, harganya ditulis <b>3x</b>.</p>
+          </div>
+          <p class="catatan" style="margin-top: 14px;">Huruf seperti x, y, a, b, atau p dipakai seperti "kotak misteri" yang isinya sebuah bilangan.</p>
+        </div>
+        <div>
+          <div class="kotak-misteri" aria-hidden="true">
+            <div class="misteri">x</div><div class="misteri">x</div><div class="misteri">x</div>
+          </div>
+          <p class="hasil-misteri">x + x + x = <span class="suku x">3x</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. BAGIAN-BAGIAN BENTUK ALJABAR ================= -->
+  <section class="bagian" style="padding-top: 10px;">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Bagian 2</span>
+        <h2>Bagian-Bagian Bentuk Aljabar</h2>
+        <p>Klik tombol istilah di bawah, atau klik langsung bagian bentuk aljabarnya.</p>
+      </div>
+
+      <div class="kotak muncul-saat-gulir">
+        <div class="ekspresi-besar" id="ekspresi-kenalan">
+          <span class="suku-ek x"><span class="koef" data-istilah="koefisien">3</span><span class="var" data-istilah="variabel">x</span></span>
+          <span class="op">+</span>
+          <span class="suku-ek y"><span class="koef" data-istilah="koefisien">2</span><span class="var" data-istilah="variabel">y</span></span>
+          <span class="op">−</span>
+          <span class="suku-ek k"><span class="konst" data-istilah="konstanta">5</span></span>
+        </div>
+
+        <div class="istilah-grid">
+          <button class="istilah" data-istilah="variabel">Variabel</button>
+          <button class="istilah" data-istilah="koefisien">Koefisien</button>
+          <button class="istilah" data-istilah="konstanta">Konstanta</button>
+          <button class="istilah" data-istilah="suku">Suku</button>
+        </div>
+
+        <div class="info-istilah" id="info-istilah">
+          <h3>Pilih salah satu istilah</h3>
+          <p>Bagian yang dimaksud akan menyala kuning pada bentuk aljabar di atas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. SUKU SEJENIS ================= -->
+  <section class="bagian" style="padding-top: 10px;">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Bagian 3</span>
+        <h2>Suku Sejenis dan Tidak Sejenis</h2>
+        <p>Inilah kunci untuk menyederhanakan bentuk aljabar!</p>
+      </div>
+
+      <div class="banding">
+        <div class="kotak muncul-saat-gulir">
+          <h3><span class="tanda ya">✓</span> Sejenis</h3>
+          <div class="baris-pasangan"><span class="suku x">3x</span> dan <span class="suku x">−5x</span> <small>sama-sama x</small></div>
+          <div class="baris-pasangan"><span class="suku y">2y</span> dan <span class="suku y">7y</span> <small>sama-sama y</small></div>
+          <div class="baris-pasangan"><span class="suku k">4</span> dan <span class="suku k">−1</span> <small>sama-sama konstanta</small></div>
+          <div class="baris-pasangan"><span class="suku v">2ab</span> dan <span class="suku v">5ab</span> <small>sama-sama ab</small></div>
+        </div>
+        <div class="kotak muncul-saat-gulir">
+          <h3><span class="tanda tidak">✗</span> Tidak Sejenis</h3>
+          <div class="baris-pasangan"><span class="suku x">3x</span> dan <span class="suku y">3y</span> <small>variabelnya beda</small></div>
+          <div class="baris-pasangan"><span class="suku x">x</span> dan <span class="suku v">x<sup>2</sup></span> <small>pangkatnya beda</small></div>
+          <div class="baris-pasangan"><span class="suku x">4x</span> dan <span class="suku k">4</span> <small>yang satu tanpa variabel</small></div>
+          <div class="baris-pasangan"><span class="suku x">6x</span> dan <span class="suku v">6xy</span> <small>variabelnya beda</small></div>
+        </div>
+      </div>
+
+      <div class="aturan muncul-saat-gulir">
+        Suku disebut <b>sejenis</b> jika <b>variabel</b> dan <b>pangkatnya sama persis</b>.<br>
+        Koefisiennya boleh berbeda. Hanya suku sejenis yang boleh dijumlahkan atau dikurangkan!
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. MINI-GAME ================= -->
+  <section class="bagian" style="padding-top: 10px;">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Ayo Bermain</span>
+        <h2>Tangkap Suku Sejenis!</h2>
+        <p>Klik <b>semua</b> suku yang sejenis dengan suku target, lalu tekan "Periksa".</p>
+      </div>
+
+      <div class="kotak muncul-saat-gulir" id="game">
+        <div class="game-kepala">
+          <span id="game-ronde">Ronde 1 dari 5</span>
+          <span class="skor" id="game-skor">Skor: 0</span>
+        </div>
+        <div id="game-isi">
+          <p class="game-soal">Suku target: <span class="target" id="game-target"></span></p>
+          <div class="pilihan-grid" id="game-pilihan"></div>
+          <p class="umpan-balik" id="game-umpan"></p>
+          <div class="game-tombol">
+            <button class="tombol tombol-utama" id="game-periksa">Periksa</button>
+            <button class="tombol tombol-utama" id="game-lanjut" style="display: none;">Ronde Berikutnya →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NAVIGASI ================= -->
+  <section class="bagian" style="padding-top: 10px;">
+    <div class="wadah navigasi-bawah">
+      <a href="index.html" class="tombol tombol-ungu-garis">← Beranda</a>
+      <a href="metode.html" class="tombol tombol-utama">Lanjut ke Metode →</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <strong>Aljabar Menyenangkan</strong> · Dibuat oleh <strong>Kak Jihan Fithriyyah</strong></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

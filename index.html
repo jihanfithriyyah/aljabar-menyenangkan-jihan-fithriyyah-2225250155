@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aljabar Menyenangkan – Beranda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= MENU ATAS ================= -->
+  <nav class="navbar">
+    <div class="wadah">
+      <a href="index.html" class="logo"><span class="logo-ikon">x</span> Aljabar Menyenangkan</a>
+      <button class="tombol-menu" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="kenalan.html">Kenalan Aljabar</a></li>
+        <li><a href="metode.html">Metode</a></li>
+        <li><a href="contoh.html">Contoh Soal</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="wadah">
+      <div>
+        <span class="lencana">Untuk Siswa Kelas VIII SMP</span>
+        <h1>Aljabar <span>Menyenangkan</span></h1>
+        <p class="sub">Belajar menyederhanakan bentuk aljabar bersama Kak Jihan. Langkah demi langkah, penuh warna, dan pastinya mudah dipahami!</p>
+        <div class="hero-tombol">
+          <a href="kenalan.html" class="tombol tombol-utama">Mulai Belajar →</a>
+          <a href="kuis.html" class="tombol tombol-garis">Langsung Kuis</a>
+        </div>
+      </div>
+
+      <!-- Ilustrasi: kubus 3D + avatar Kak Jihan -->
+      <div class="panggung" aria-hidden="true">
+        <div class="kubus-wadah k1">
+          <div class="kubus kubus-x">
+            <div class="sisi depan">x</div><div class="sisi belakang">x</div>
+            <div class="sisi kanan">x</div><div class="sisi kiri">x</div>
+            <div class="sisi atas"></div><div class="sisi bawah"></div>
+          </div>
+        </div>
+        <div class="kubus-wadah k2">
+          <div class="kubus kubus-y">
+            <div class="sisi depan">y</div><div class="sisi belakang">y</div>
+            <div class="sisi kanan">y</div><div class="sisi kiri">y</div>
+            <div class="sisi atas"></div><div class="sisi bawah"></div>
+          </div>
+        </div>
+        <div class="kubus-wadah k3">
+          <div class="kubus kubus-k">
+            <div class="sisi depan">5</div><div class="sisi belakang">5</div>
+            <div class="sisi kanan">5</div><div class="sisi kiri">5</div>
+            <div class="sisi atas"></div><div class="sisi bawah"></div>
+          </div>
+        </div>
+
+        <div class="avatar-kartu">
+          <div class="gelembung" id="gelembung"></div>
+          <div class="avatar">
+            <div class="avatar-dalam">KJ</div>
+            <div class="avatar-pensil">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2e1272" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg>
+            </div>
+          </div>
+          <span class="avatar-nama">Kak Jihan</span>
+        </div>
+      </div>
+    </div>
+
+    <svg class="gelombang" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,70 L0,70 Z" fill="#f8f6ff"/>
+    </svg>
+  </header>
+
+  <!-- ================= DEMO SUKU SEJENIS ================= -->
+  <section class="bagian">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Coba Dulu Yuk</span>
+        <h2>Rahasia Menyederhanakan Aljabar</h2>
+        <p>Suku-suku yang <b>sejenis</b> diberi warna yang sama. Gabungkan yang warnanya sama, dan bentuk aljabar jadi lebih sederhana!</p>
+      </div>
+
+      <div class="demo muncul-saat-gulir">
+        <p class="demo-label" id="demo-label"></p>
+        <div class="ekspresi" id="demo-ekspresi"></div>
+        <div class="titik-langkah" id="demo-titik"></div>
+        <div class="demo-tombol">
+          <button class="tombol tombol-utama" id="demo-lanjut">Langkah Berikutnya →</button>
+          <button class="tombol tombol-terang" id="demo-ulang">Ulangi</button>
+        </div>
+      </div>
+
+      <div class="legenda muncul-saat-gulir">
+        <div><i style="background: var(--x)"></i> Suku x</div>
+        <div><i style="background: var(--y)"></i> Suku y</div>
+        <div><i style="background: var(--k)"></i> Konstanta (angka saja)</div>
+        <div><i style="background: var(--v)"></i> Variabel lain (a, b, p, …)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KARTU MENU ================= -->
+  <section class="bagian" style="padding-top: 20px;">
+    <div class="wadah">
+      <div class="judul-bagian muncul-saat-gulir">
+        <span class="kecil">Alur Belajar</span>
+        <h2>Apa Saja yang Akan Kamu Pelajari?</h2>
+        <p>Ikuti urutannya dari nomor 1 sampai 4, ya!</p>
+      </div>
+
+      <div class="kartu-grid">
+        <a href="kenalan.html" class="kartu muncul-saat-gulir">
+          <span class="nomor">01</span>
+          <div class="kartu-ikon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M8 7h8M8 11h6"/></svg>
+          </div>
+          <h3>Kenalan dengan Aljabar</h3>
+          <p>Variabel, koefisien, konstanta, suku, dan suku sejenis.</p>
+          <span class="lanjut">Pelajari →</span>
+        </a>
+
+        <a href="metode.html" class="kartu muncul-saat-gulir">
+          <span class="nomor">02</span>
+          <div class="kartu-ikon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h7"/></svg>
+          </div>
+          <h3>Metode Penyederhanaan</h3>
+          <p>Kelompok suku sejenis, distributif, tanda negatif, dan lainnya.</p>
+          <span class="lanjut">Pelajari →</span>
+        </a>
+
+        <a href="contoh.html" class="kartu muncul-saat-gulir">
+          <span class="nomor">03</span>
+          <div class="kartu-ikon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2z"/></svg>
+          </div>
+          <h3>Contoh Soal</h3>
+          <p>Pembahasan singkat, jelas, dan langkah demi langkah.</p>
+          <span class="lanjut">Pelajari →</span>
+        </a>
+
+        <a href="kuis.html" class="kartu muncul-saat-gulir">
+          <span class="nomor">04</span>
+          <div class="kartu-ikon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+          </div>
+          <h3>Kuis Interaktif</h3>
+          <p>10 soal dengan nilai otomatis. Tunjukkan kemampuanmu!</p>
+          <span class="lanjut">Mulai kuis →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AJAKAN ================= -->
+  <section class="bagian" style="padding-top: 10px;">
+    <div class="wadah">
+      <div class="ajakan muncul-saat-gulir">
+        <div>
+          <h2>Siap jadi jago aljabar?</h2>
+          <p>Mulai dari mengenal bagian-bagian bentuk aljabar dulu, yuk!</p>
+        </div>
+        <a href="kenalan.html" class="tombol tombol-terang">Ayo Mulai →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <strong>Aljabar Menyenangkan</strong> · Dibuat oleh <strong>Kak Jihan Fithriyyah</strong></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

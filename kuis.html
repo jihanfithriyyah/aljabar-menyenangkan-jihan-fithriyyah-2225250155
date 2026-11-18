@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aljabar Menyenangkan – Kuis Interaktif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= MENU ATAS ================= -->
+  <nav class="navbar">
+    <div class="wadah">
+      <a href="index.html" class="logo"><span class="logo-ikon">x</span> Aljabar Menyenangkan</a>
+      <button class="tombol-menu" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="kenalan.html">Kenalan Aljabar</a></li>
+        <li><a href="metode.html">Metode</a></li>
+        <li><a href="contoh.html">Contoh Soal</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= JUDUL HALAMAN ================= -->
+  <header class="hero-kecil">
+    <div class="wadah">
+      <span class="lencana-langkah">Langkah 4 dari 4</span>
+      <h1>Kuis Interaktif</h1>
+      <p>Tunjukkan kemampuanmu menyederhanakan bentuk aljabar!</p>
+    </div>
+  </header>
+
+  <section class="bagian">
+    <div class="wadah">
+      <div class="kotak kuis-kotak">
+
+        <!-- ===== LAYAR 1: ISI NAMA ===== -->
+        <div class="layar aktif" id="layar-mulai">
+          <div class="mulai-tengah">
+            <div class="avatar">
+              <div class="avatar-dalam">KJ</div>
+            </div>
+            <h2>Halo! Siapa namamu?</h2>
+            <p class="catatan">Tulis namamu dulu, ya. Kak Jihan akan memberitahukan nilaimu di akhir kuis.</p>
+            <div class="info-kuis">
+              <span>10 soal</span>
+              <span>Pilihan ganda</span>
+              <span>Nilai otomatis</span>
+            </div>
+            <form class="kolom-nama" id="form-nama" novalidate>
+              <label for="nama-siswa">Nama lengkap</label>
+              <input type="text" id="nama-siswa" placeholder="Contoh: Aisyah Putri" maxlength="40" autocomplete="name">
+              <p class="pesan-error" id="error-nama"></p>
+              <button type="submit" class="tombol tombol-utama" style="width: 100%; justify-content: center; margin-top: 6px;">Mulai Kuis →</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- ===== LAYAR 2: SOAL ===== -->
+        <div class="layar" id="layar-soal">
+          <div class="kuis-atas">
+            <span>Soal <b id="no-soal">1</b> dari 10</span>
+            <span>Semangat, <b id="sapa-nama"></b>!</span>
+          </div>
+          <div class="bilah"><div class="bilah-isi" id="bilah-isi"></div></div>
+          <p class="soal-teks" id="soal-teks"></p>
+          <div class="opsi-grid" id="opsi-grid"></div>
+          <div class="penjelasan-soal" id="penjelasan-soal"></div>
+          <div class="kuis-bawah">
+            <button class="tombol tombol-utama" id="tombol-berikut" style="display: none;">Soal Berikutnya →</button>
+          </div>
+        </div>
+
+        <!-- ===== LAYAR 3: HASIL ===== -->
+        <div class="layar" id="layar-hasil">
+          <div class="bintang" id="bintang"></div>
+          <div class="panggung-hasil">
+            <div class="tokoh">
+              <div class="gelembung" id="ucapan-jihan"></div>
+              <div class="avatar"><div class="avatar-dalam">KJ</div></div>
+              <span class="avatar-nama">Kak Jihan</span>
+            </div>
+            <div class="lingkar-nilai" id="lingkar-nilai" style="--persen: 0;">
+              <div><span><b id="angka-nilai">0</b><small>Nilai</small></span></div>
+            </div>
+            <div class="tokoh kanan">
+              <div class="gelembung" id="ucapan-siswa"></div>
+              <div class="avatar siswa"><div class="avatar-dalam" id="inisial-siswa"></div></div>
+              <span class="avatar-nama" id="nama-hasil"></span>
+            </div>
+          </div>
+          <div class="ringkasan">
+            <div class="hijau"><b id="jumlah-benar">0</b><small>Benar</small></div>
+            <div class="merah"><b id="jumlah-salah">0</b><small>Salah</small></div>
+            <div><b id="nilai-kecil">0</b><small>Nilai</small></div>
+          </div>
+          <div class="hasil-tombol">
+            <button class="tombol tombol-terang" id="tombol-bahas">Lihat Pembahasan</button>
+            <button class="tombol tombol-utama" id="tombol-ulang">Ulangi Kuis</button>
+            <a href="metode.html" class="tombol tombol-ungu-garis">Pelajari Lagi</a>
+          </div>
+          <div class="daftar-bahas" id="daftar-bahas"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <strong>Aljabar Menyenangkan</strong> · Dibuat oleh <strong>Kak Jihan Fithriyyah</strong></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

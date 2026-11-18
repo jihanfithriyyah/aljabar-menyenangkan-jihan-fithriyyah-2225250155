@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aljabar Menyenangkan – Metode Penyederhanaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= MENU ATAS ================= -->
+  <nav class="navbar">
+    <div class="wadah">
+      <a href="index.html" class="logo"><span class="logo-ikon">x</span> Aljabar Menyenangkan</a>
+      <button class="tombol-menu" aria-label="Buka menu"><span></span><span></span><span></span></button>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="kenalan.html">Kenalan Aljabar</a></li>
+        <li><a href="metode.html">Metode</a></li>
+        <li><a href="contoh.html">Contoh Soal</a></li>
+        <li><a href="kuis.html">Kuis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= JUDUL HALAMAN ================= -->
+  <header class="hero-kecil">
+    <div class="wadah">
+      <span class="lencana-langkah">Langkah 2 dari 4</span>
+      <h1>Metode Penyederhanaan</h1>
+      <p>Lima cara menyederhanakan bentuk aljabar. Klik "Langkah Berikutnya" untuk melihat prosesnya.</p>
+    </div>
+  </header>
+
+  <section class="bagian">
+    <div class="wadah">
+      <nav class="daftar-isi" aria-label="Daftar metode">
+        <a href="#kelompok">1. Kelompokkan Suku Sejenis</a>
+        <a href="#distributif">2. Sifat Distributif</a>
+        <a href="#negatif">3. Tanda Negatif</a>
+        <a href="#ubin">4. Ubin Aljabar</a>
+        <a href="#susun">5. Cara Bersusun</a>
+      </nav>
+
+      <article class="kotak metode muncul-saat-gulir" id="kelompok">
+        <div class="metode-kepala">
+          <span class="metode-nomor">1</span>
+          <div>
+            <h3>Mengelompokkan Suku Sejenis</h3>
+            <p>Cara paling dasar. Dipakai di hampir semua soal penyederhanaan.</p>
+          </div>
+        </div>
+        <p class="rumus">Kumpulkan suku yang warnanya sama → jumlahkan atau kurangkan koefisiennya</p>
+        <div class="langkah-kotak" data-langkah="kelompok"></div>
+        <div class="awas"><b>Ingat!</b> Saat suku dipindah, tanda + atau − di depannya ikut pindah. Variabelnya tetap, hanya koefisiennya yang dihitung: 7x − 3x = 4x, bukan 4.</div>
+      </article>
+
+      <article class="kotak metode muncul-saat-gulir" id="distributif">
+        <div class="metode-kepala">
+          <span class="metode-nomor">2</span>
+          <div>
+            <h3>Sifat Distributif (Membuka Kurung)</h3>
+            <p>Dipakai jika ada angka di depan tanda kurung.</p>
+          </div>
+        </div>
+        <p class="rumus">a(b + c) = ab + ac &nbsp;&nbsp;|&nbsp;&nbsp; a(b − c) = ab − ac</p>
+        <div class="langkah-kotak" data-langkah="distributif"></div>
+        <div class="awas"><b>Kesalahan yang sering terjadi:</b> hanya mengalikan suku pertama. 2(3x + 4) = 6x + 4 ✗. Yang benar 6x + 8 ✓.</div>
+      </article>
+
+      <article class="kotak metode muncul-saat-gulir" id="negatif">
+        <div class="metode-kepala">
+          <span class="metode-nomor">3</span>
+          <div>
+            <h3>Tanda Negatif di Depan Kurung</h3>
+            <p>Bagian paling sering salah! Perhatikan aturan perkalian tanda.</p>
+          </div>
+        </div>
+        <div class="tabel-tanda">
+          <div>(+) × (+) = +<small>positif</small></div>
+          <div>(+) × (−) = −<small>negatif</small></div>
+          <div>(−) × (+) = −<small>negatif</small></div>
+          <div>(−) × (−) = +<small>positif</small></div>
+        </div>
+        <div class="langkah-kotak" data-langkah="negatif"></div>
+        <div class="awas"><b>Awas jebakan!</b> −2(3x − 5) = −6x − 10 ✗. Yang benar −6x <b>+ 10</b> ✓, karena −2 × (−5) = +10. Tanda minus di depan kurung mengubah tanda <b>semua</b> suku di dalamnya.</div>
+      </article>
+
+      <article class="kotak metode muncul-saat-gulir" id="ubin">
+        <div class="metode-kepala">
+          <span class="metode-nomor">4</span>
+          <div>
+            <h3>Model Ubin Aljabar</h3>
+            <p>Cara visual untuk memahami mengapa suku positif dan negatif bisa saling menghapus.</p>
+          </div>
+        </div>
+        <p class="rumus">Pasangan ubin positif dan negatif yang sejenis = 0</p>
+        <div class="langkah-kotak" data-langkah="ubin"></div>
+        <div class="ubin-legenda">
+          <span><i style="width:30px;height:12px;background:var(--x)"></i> x</span>
+          <span><i style="width:12px;height:12px;background:var(--k)"></i> 1</span>
+          <span><i style="width:30px;height:12px;background:#e05555"></i> −x</span>
+          <span><i style="width:12px;height:12px;background:#e05555"></i> −1</span>
+        </div>
+      </article>
+
+      <article class="kotak metode muncul-saat-gulir" id="susun">
+        <div class="metode-kepala">
+          <span class="metode-nomor">5</span>
+          <div>
+            <h3>Cara Bersusun</h3>
+            <p>Praktis untuk menjumlahkan dua bentuk aljabar yang panjang.</p>
+          </div>
+        </div>
+        <p class="rumus">Tulis suku sejenis lurus dalam satu kolom, lalu hitung per kolom</p>
+        <div class="langkah-kotak" data-langkah="susun"></div>
+        <div class="awas"><b>Untuk pengurangan:</b> ubah dulu semua tanda pada bentuk kedua, lalu jumlahkan. Contoh: (5x + 2) − (3x − 4) menjadi 5x + 2 − 3x + 4 = 2x + 6.</div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="bagian" style="padding-top: 0;">
+    <div class="wadah navigasi-bawah">
+      <a href="kenalan.html" class="tombol tombol-ungu-garis">← Kenalan Aljabar</a>
+      <a href="contoh.html" class="tombol tombol-utama">Lanjut ke Contoh Soal →</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <strong>Aljabar Menyenangkan</strong> · Dibuat oleh <strong>Kak Jihan Fithriyyah</strong></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
