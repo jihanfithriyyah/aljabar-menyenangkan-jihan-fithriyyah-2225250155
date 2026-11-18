@@ -515,59 +515,104 @@ const layarMulai = document.getElementById("layar-mulai");
 
 if (layarMulai) {
   // ---- Bank soal (jawaban = teks pilihan yang benar) ----
+  // Setiap soal diberi label indikator Mathematical Literacy:
+  // R = Mathematical Reasoning, F = Formulating Situations Mathematically,
+  // E = Employing Mathematical Concepts, Facts, and Procedures,
+  // I = Interpreting, Applying, and Evaluating Mathematical Outcomes
   const SOAL = [
     {
-      tanya: "Koefisien dari x pada bentuk aljabar 7x − 3y + 2 adalah …",
-      opsi: ["7", "−3", "2", "x"], jawaban: "7",
-      bahas: "Koefisien adalah angka di depan variabel. Angka di depan x adalah 7."
+      indikator: "R",
+      tanya: "Toko A menjual paket alat tulis seharga 3(2x + y) − x, sedangkan Toko B menjual paket seharga 2(2x + 2y). Harga satu buku adalah x dan harga satu pensil adalah y, dengan harga buku lebih mahal daripada pensil (x > y). Pernyataan mana yang benar?",
+      opsi: [
+        "Paket B lebih murah, karena A − B = x − y dan x > y",
+        "Paket A lebih murah, karena koefisien y pada paket A lebih kecil",
+        "Harga keduanya sama, karena jumlah koefisiennya sama-sama 8",
+        "Kedua paket tidak dapat dibandingkan"
+      ],
+      jawaban: "Paket B lebih murah, karena A − B = x − y dan x > y",
+      bahas: "Paket A = 6x + 3y − x = 5x + 3y. Paket B = 4x + 4y. Selisihnya A − B = x − y. Karena x > y, selisihnya positif, artinya paket A lebih mahal dan paket B lebih murah."
     },
     {
-      tanya: "Manakah pasangan suku sejenis di bawah ini?",
-      opsi: ["3x dan 3y", "2x dan 2x²", "4y dan −9y", "5 dan 5a"], jawaban: "4y dan −9y",
-      bahas: "4y dan −9y sama-sama memiliki variabel y berpangkat 1. Koefisiennya boleh berbeda."
+      indikator: "R",
+      tanya: "Rani berkata, \"Bentuk 3x + 2y bisa disederhanakan menjadi 5xy.\" Pendapat mana yang paling tepat?",
+      opsi: [
+        "Rani salah, karena 3x dan 2y bukan suku sejenis sehingga tidak bisa digabung",
+        "Rani benar, karena 3 + 2 = 5",
+        "Rani salah, seharusnya hasilnya 6xy",
+        "Rani benar, karena variabel x dan y boleh digabung"
+      ],
+      jawaban: "Rani salah, karena 3x dan 2y bukan suku sejenis sehingga tidak bisa digabung",
+      bahas: "Hanya suku sejenis yang boleh dijumlahkan. 3x dan 2y memiliki variabel berbeda, jadi 3x + 2y sudah merupakan bentuk paling sederhana."
     },
     {
-      tanya: "Bentuk sederhana dari 8x + 3 − 5x + 6 adalah …",
-      opsi: ["3x + 9", "13x + 9", "3x − 3", "12x"], jawaban: "3x + 9",
-      bahas: "(8x − 5x) + (3 + 6) = 3x + 9."
+      indikator: "F",
+      tanya: "Sebuah bingkai foto berbentuk persegi panjang dengan panjang (3x + 2) cm dan lebar (x − 1) cm. Bentuk aljabar paling sederhana untuk keliling bingkai tersebut adalah …",
+      opsi: ["8x + 2", "4x + 1", "7x + 3", "8x + 6"],
+      jawaban: "8x + 2",
+      bahas: "Keliling = 2 × panjang + 2 × lebar = 2(3x + 2) + 2(x − 1) = 6x + 4 + 2x − 2 = 8x + 2."
     },
     {
-      tanya: "Hasil dari 4(2x − 3) adalah …",
-      opsi: ["8x − 3", "8x − 12", "6x − 12", "8x + 12"], jawaban: "8x − 12",
-      bahas: "Kalikan 4 ke setiap suku: 4 × 2x = 8x dan 4 × (−3) = −12."
+      indikator: "F",
+      tanya: "Dina membeli 4 kotak pensil. Setiap kotak berisi (x + 3) pensil. Dina lalu memberikan 5 pensil kepada temannya. Bentuk aljabar yang menyatakan banyak pensil Dina sekarang adalah …",
+      opsi: ["4x + 7", "4x − 2", "4x + 12", "x + 7"],
+      jawaban: "4x + 7",
+      bahas: "Modelnya 4(x + 3) − 5 = 4x + 12 − 5 = 4x + 7 pensil. Angka 4 harus dikalikan ke x dan ke 3."
     },
     {
+      indikator: "F",
+      tanya: "Harga satu tiket masuk museum adalah x rupiah dan harga satu minuman adalah y rupiah. Sebuah rombongan membeli 5 tiket dan 5 minuman, lalu mendapat potongan seharga 2 minuman. Bentuk aljabar yang menyatakan total yang harus dibayar adalah …",
+      opsi: ["5(x + y) − 2y = 5x + 3y", "5(x + y) − 2 = 5x + 5y − 2", "5x + y − 2y = 5x − y", "5(x − 2y) = 5x − 10y"],
+      jawaban: "5(x + y) − 2y = 5x + 3y",
+      bahas: "5 tiket dan 5 minuman = 5(x + y). Potongan seharga 2 minuman = 2y. Total = 5x + 5y − 2y = 5x + 3y."
+    },
+    {
+      indikator: "E",
+      tanya: "Uang tabungan Rudi bertambah (8x + 3) ribu rupiah, lalu ia memakai (5x − 6) ribu rupiah untuk membeli buku. Bentuk paling sederhana dari sisa tambahan tabungan Rudi, yaitu (8x + 3) − (5x − 6), adalah …",
+      opsi: ["3x + 9", "3x − 3", "13x + 9", "13x − 3"],
+      jawaban: "3x + 9",
+      bahas: "Tanda minus di depan kurung mengubah semua tanda di dalamnya: 8x + 3 − 5x + 6 = (8x − 5x) + (3 + 6) = 3x + 9."
+    },
+    {
+      indikator: "E",
       tanya: "Hasil dari −2(x − 5) adalah …",
-      opsi: ["−2x − 10", "−2x + 10", "2x − 10", "−2x + 5"], jawaban: "−2x + 10",
+      opsi: ["−2x + 10", "−2x − 10", "2x − 10", "−2x + 5"],
+      jawaban: "−2x + 10",
       bahas: "−2 × x = −2x dan −2 × (−5) = +10, karena negatif × negatif = positif."
     },
     {
-      tanya: "Bentuk sederhana dari 6x + 2y − x + 3y adalah …",
-      opsi: ["5x + 5y", "7x + 5y", "5x − y", "10xy"], jawaban: "5x + 5y",
-      bahas: "(6x − x) + (2y + 3y) = 5x + 5y. Suku x dan y tidak sejenis, jadi tidak boleh digabung menjadi xy."
-    },
-    {
-      tanya: "Bentuk sederhana dari 3(x + 2) + 2(x − 1) adalah …",
-      opsi: ["5x + 4", "5x + 8", "5x + 1", "6x + 4"], jawaban: "5x + 4",
-      bahas: "3x + 6 + 2x − 2 = (3x + 2x) + (6 − 2) = 5x + 4."
-    },
-    {
+      indikator: "E",
       tanya: "Bentuk sederhana dari 5(x + y) − 3(x − y) adalah …",
-      opsi: ["2x + 2y", "2x + 8y", "8x + 2y", "2x − 8y"], jawaban: "2x + 8y",
+      opsi: ["2x + 8y", "2x + 2y", "8x + 2y", "2x − 8y"],
+      jawaban: "2x + 8y",
       bahas: "5x + 5y − 3x + 3y. Ingat −3 × (−y) = +3y. Hasilnya (5x − 3x) + (5y + 3y) = 2x + 8y."
     },
     {
-      tanya: "Dina membeli 4 kotak pensil. Setiap kotak berisi (x + 3) pensil. Dina lalu memberikan 5 pensil kepada temannya. Banyak pensil Dina sekarang adalah …",
-      opsi: ["4x + 7", "4x − 2", "4x + 12", "x + 7"], jawaban: "4x + 7",
-      bahas: "4(x + 3) − 5 = 4x + 12 − 5 = 4x + 7 pensil."
-    },
-    {
+      indikator: "I",
       tanya: "Budi menyederhanakan 7x − 2(x + 4) dan mendapat hasil 5x + 8. Pernyataan yang tepat tentang pekerjaan Budi adalah …",
-      opsi: ["Jawaban Budi sudah benar", "Seharusnya 5x − 8, karena −2 × 4 = −8", "Seharusnya 9x + 8", "Seharusnya 5x + 4"],
+      opsi: ["Seharusnya 5x − 8, karena −2 × 4 = −8", "Jawaban Budi sudah benar", "Seharusnya 9x + 8", "Seharusnya 5x + 4"],
       jawaban: "Seharusnya 5x − 8, karena −2 × 4 = −8",
       bahas: "7x − 2x − 8 = 5x − 8. Budi lupa bahwa tanda minus di depan 2 ikut dikalikan ke angka 4."
+    },
+    {
+      indikator: "I",
+      tanya: "Sinta membawa uang 50 ribu rupiah untuk membeli 4 pulpen. Harga satu pulpen (x + 2) ribu rupiah. Sisa uang Sinta dinyatakan dengan 50 − 4(x + 2) = 42 − 4x. Jika x = 12, hasilnya 42 − 48 = −6. Apa arti hasil tersebut?",
+      opsi: [
+        "Uang Sinta tidak cukup, ia masih kurang Rp6.000",
+        "Sinta mendapat kembalian Rp6.000",
+        "Sisa uang Sinta adalah Rp6.000",
+        "Harga satu pulpen adalah Rp6.000"
+      ],
+      jawaban: "Uang Sinta tidak cukup, ia masih kurang Rp6.000",
+      bahas: "Harga satu pulpen 12 + 2 = 14 ribu, jadi 4 pulpen = 56 ribu, lebih dari 50 ribu. Hasil negatif (−6) artinya uangnya kurang 6 ribu rupiah."
     }
   ];
+
+  const NAMA_INDIKATOR = {
+    R: "Mathematical Reasoning",
+    F: "Formulating Situations Mathematically",
+    E: "Employing Concepts, Facts, and Procedures",
+    I: "Interpreting, Applying, and Evaluating"
+  };
 
   const layarSoal = document.getElementById("layar-soal");
   const layarHasil = document.getElementById("layar-hasil");
@@ -631,7 +676,7 @@ if (layarMulai) {
     const s = SOAL[nomor];
     elNo.textContent = nomor + 1;
     elBilah.style.width = `${(nomor / SOAL.length) * 100}%`;
-    elTanya.textContent = `${nomor + 1}. ${s.tanya}`;
+    elTanya.innerHTML = `<span style="display:inline-block;margin-bottom:8px;padding:3px 12px;border-radius:999px;background:var(--ungu-pucat);color:var(--ungu);font-size:0.78rem;font-weight:700">${NAMA_INDIKATOR[s.indikator]}</span><br>${nomor + 1}. ${s.tanya}`;
     elBahas.className = "penjelasan-soal";
     tombolBerikut.style.display = "none";
 
@@ -708,7 +753,7 @@ if (layarMulai) {
       SOAL.map((s, i) => {
         const j = jawabanSiswa[i];
         return `<div class="bahas-item ${j.benar ? "" : "salah"}">
-          <p class="q">${i + 1}. ${s.tanya}</p>
+          <p class="q">${i + 1}. [${NAMA_INDIKATOR[s.indikator]}] ${s.tanya}</p>
           <p>Jawabanmu: <b>${j.dipilih}</b> ${j.benar ? "✓" : "✗"}</p>
           ${j.benar ? "" : `<p>Jawaban benar: <b>${s.jawaban}</b></p>`}
           <p>${s.bahas}</p>
@@ -716,6 +761,25 @@ if (layarMulai) {
       }).join("");
     document.getElementById("daftar-bahas").classList.remove("buka");
     document.getElementById("tombol-bahas").textContent = "Lihat Pembahasan";
+
+    // skor per indikator Mathematical Literacy
+    let kotakIndikator = document.getElementById("skor-indikator");
+    if (!kotakIndikator) {
+      kotakIndikator = document.createElement("div");
+      kotakIndikator.id = "skor-indikator";
+      kotakIndikator.style.cssText = "margin: 0 0 24px; padding: 18px 20px; border-radius: 16px; background: var(--latar);";
+      document.querySelector("#layar-hasil .ringkasan").after(kotakIndikator);
+    }
+    kotakIndikator.innerHTML = "<h3 style='font-size:1rem;margin-bottom:12px'>Skor per Indikator Mathematical Literacy</h3>" +
+      Object.keys(NAMA_INDIKATOR).map((kode) => {
+        const daftar = SOAL.map((s, i) => ({ s, j: jawabanSiswa[i] })).filter((d) => d.s.indikator === kode);
+        const benar = daftar.filter((d) => d.j.benar).length;
+        const persen = Math.round((benar / daftar.length) * 100);
+        return `<div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;font-size:0.9rem;margin-bottom:4px"><span>${NAMA_INDIKATOR[kode]}</span><b>${benar}/${daftar.length}</b></div>
+          <div style="height:10px;border-radius:999px;background:var(--ungu-pucat);overflow:hidden"><div style="height:100%;width:${persen}%;border-radius:999px;background:linear-gradient(90deg,var(--ungu-cerah),var(--ungu))"></div></div>
+        </div>`;
+      }).join("");
 
     pindahLayar(layarHasil);
     animasiNilai(nilai);
@@ -772,3 +836,36 @@ if (layarMulai) {
   });
   document.getElementById("tombol-ulang").addEventListener("click", mulaiKuis);
 }
+
+/* =========================================================
+   12. APLIKASI (PWA): pasang di HP/laptop
+   ========================================================= */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js").catch(() => {});
+  });
+}
+
+// Tombol "Pasang Aplikasi" muncul jika browser mendukung
+let ajakanPasang = null;
+const tombolPasang = document.getElementById("tombol-pasang");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  ajakanPasang = e;
+  if (tombolPasang) tombolPasang.hidden = false;
+});
+
+if (tombolPasang) {
+  tombolPasang.addEventListener("click", async () => {
+    if (!ajakanPasang) return;
+    ajakanPasang.prompt();
+    await ajakanPasang.userChoice;
+    ajakanPasang = null;
+    tombolPasang.hidden = true;
+  });
+}
+
+window.addEventListener("appinstalled", () => {
+  if (tombolPasang) tombolPasang.hidden = true;
+});
